@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Root" prefHeight="500.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
+    <children>
+        <ImageView fitHeight="501.0" fitWidth="1069.0" layoutX="-14.0" pickOnBounds="true">
+            <image>
+                <Image url="@../asserts/5of3_qijr_210603.jpg" />
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="UID" layoutX="28.0" layoutY="144.0" onKeyReleased="#UseIDvalide" promptText="U001">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="UPass" layoutX="373.0" layoutY="144.0" onKeyReleased="#usePawordValide" promptText="chamara1234">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="UName" layoutX="200.0" layoutY="144.0" onKeyReleased="#useNameValide" promptText="Chamara@AA">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+        <Label layoutX="28.0" layoutY="127.0" text="User ID">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="200.0" layoutY="127.0" text="User Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="373.0" layoutY="127.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Button fx:id="saveBtn" layoutX="868.0" layoutY="157.0" mnemonicParsing="false" onAction="#ClickOnNew" style="-fx-background-color: #1dab32;" text="new+" />
+        <TableView fx:id="tblUser" layoutX="18.0" layoutY="206.0" prefHeight="280.0" prefWidth="1035.0">
+            <columns>
+                <TableColumn fx:id="tUID" prefWidth="148.0" text="User ID" />
+                <TableColumn fx:id="TUName" prefWidth="468.0" text="User Name" />
+                <TableColumn fx:id="TUPass" prefWidth="430.0" text="Password" />
+            </columns>
+        </TableView>
+        <Button fx:id="updateBtn" layoutX="931.0" layoutY="157.0" mnemonicParsing="false" onAction="#ClickOnUpdate" style="-fx-background-color: #05a7ff;" text="Updeta" />
+        <TextField fx:id="SearchID" layoutX="583.0" layoutY="87.0" onAction="#txtSearchOnAction" onKeyReleased="#searchIDvalide" prefHeight="25.0" prefWidth="403.0" promptText="Enetr User ID">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+        <Button fx:id="serachbtn" layoutX="994.0" layoutY="87.0" mnemonicParsing="false" onAction="#ClickSearchOnAction" style="-fx-background-color: #ff8605;" text="Serach">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></Button>
+      <Label layoutX="18.0" layoutY="14.0" prefHeight="35.0" prefWidth="141.0" text="USER FORM ">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="1002.0" layoutY="157.0" mnemonicParsing="false" onAction="#ClickOnDelete" style="-fx-background-color: red;" text="Delete" />
+      <Line endX="928.0" layoutX="119.0" layoutY="49.0" startX="-100.0" />
+    </children>
+</AnchorPane>

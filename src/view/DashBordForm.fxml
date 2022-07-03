@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Root" prefHeight="650.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBordFormController">
+    <children>
+      <AnchorPane layoutY="-4.0" prefHeight="47.0" prefWidth="1069.0" style="-fx-background-color: #02f41a;">
+         <children>
+            <Label fx:id="Date" layoutX="922.0" layoutY="15.0" prefHeight="17.0" prefWidth="76.0" text="Date" />
+            <Button layoutX="998.0" layoutY="11.0" mnemonicParsing="false" onAction="#ClickOnLogOut" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #f80000;" text="LogOut" />
+            <Label fx:id="Time" layoutX="870.0" layoutY="15.0" prefHeight="17.0" prefWidth="46.0" text="Time" />
+         </children>
+      </AnchorPane>
+        <Label layoutX="21.0" layoutY="7.0" text="Asia Aquarium" textFill="#1f08a1">
+            <font>
+                <Font name="System Italic" size="20.0" />
+            </font>
+        </Label>
+      <AnchorPane layoutY="41.0" prefHeight="52.0" prefWidth="1069.0">
+         <children>
+            <ImageView fitHeight="53.0" fitWidth="1069.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/dark-wall-empty-room-with-plants-floor-3d-rendering.jpg" />
+               </image>
+            </ImageView>
+            <ButtonBar layoutX="8.0" layoutY="7.0" prefHeight="40.0" prefWidth="1040.0">
+              <buttons>
+                  <Button mnemonicParsing="false" onAction="#ClickOnCustomer" prefHeight="32.0" prefWidth="144.0" text="CUSTOMER" />
+                  <Button minHeight="21.0" mnemonicParsing="false" onAction="#ClickOnOrder" prefHeight="32.0" text="ORDER" />
+                  <Button minWidth="41.0" mnemonicParsing="false" onAction="#ClickOnProducts" prefHeight="32.0" text="PRODUCTS" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnOrderDetails" prefHeight="32.0" text="ORDER DETAILS" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnHomeDelivery" prefHeight="32.0" text="HOME DELIVERY" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnPayment" prefHeight="32.0" prefWidth="74.0" text="PAYMENT" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnSupplier" prefHeight="32.0" prefWidth="74.0" text="SUPPLIER" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnSupplyDetails" prefHeight="32.0" text="SUPPLY DETAILS" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnEmployee" prefHeight="32.0" text="EMPLOYEE" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnUser" prefHeight="32.0" prefWidth="74.0" text="USER" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnDashBord" prefHeight="32.0" text="DASHBOARD" />
+                  <Button mnemonicParsing="false" onAction="#ClickOnPrintbill" prefHeight="32.0" text="PLACE ORDER" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Window" layoutY="94.0" prefHeight="500.0" prefWidth="1069.0">
+         <children>
+            <AnchorPane layoutY="85.0" prefHeight="415.0" prefWidth="1069.0">
+               <children>
+                  <BarChart fx:id="BarChar" layoutX="14.0" layoutY="16.0" prefHeight="384.0" prefWidth="649.0" stylesheets="@../resources/style.css" title="Product Qty On Hand">
+                    <xAxis>
+                      <CategoryAxis label="Product Name" side="BOTTOM" fx:id="x" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y" label="Count" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <PieChart fx:id="Piechart" layoutX="676.0" layoutY="14.0" prefHeight="384.0" prefWidth="379.0" stylesheets="@../resources/stylePie.css" title="InCome And Cost" />
+               </children></AnchorPane>
+            <AnchorPane prefHeight="85.0" prefWidth="1069.0">
+               <children>
+                  <Label fx:id="IncomeShow" layoutX="154.0" layoutY="1.0" prefHeight="85.0" prefWidth="171.0" text="10000">
+                     <font>
+                        <Font name="System Bold Italic" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CostShow" layoutX="465.0" prefHeight="85.0" prefWidth="171.0" text="10000">
+                     <font>
+                        <Font name="System Bold Italic" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="InComeRete" layoutX="804.0" prefHeight="85.0" prefWidth="255.0" text="1000000">
+                     <font>
+                        <Font name="System Bold Italic" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="33.0" text="Value of total InCome">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="34.0" text="Value of Total Cost">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="647.0" layoutY="34.0" text="Percentage Of Incomet">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="604.0" prefHeight="51.0" prefWidth="1069.0">
+         <children>
+            <Label layoutX="455.0" layoutY="1.0" prefHeight="51.0" prefWidth="159.0" text="Asia Aquarium" textFill="#1f08a1">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
